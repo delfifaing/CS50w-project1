@@ -1,0 +1,26 @@
+{% extends "layout1.html" %}
+{% block title%}
+    profile
+{% endblock%}
+
+{% block content%}
+<div class="row" id="desc" >
+  <div class="col-12">
+    <div class="text-center" >
+        <h2>Welcome {{ session.user_name.title() }}</h2>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="text-right">
+      <a href="/search" class="btn btn-info" role="button">Begin Journey</a>
+    </div>
+  </div>
+  <div class="col">
+    <div class="text-left">
+      <a href="/logout" class="btn btn-info" role="button">Log Out</a>
+    </div>
+  </div>
+</div>
+{% endblock%}

@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block title%}
+    Book Info
+{% endblock%}
+
+{% block content %}
+<div class="row" id='book_row'>
+  <div class="col-6">
+    <h3>Book Information</h3>
+    <table class="table table-responsive">
+        <tr>
+          <th scope="row">Title</th>
+          <td>{{book_data.title}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Author</th>
+          <td>{{book_data.author}}</td>
+        </tr>
+        <tr>
+          <th scope="col">ISBN</th>
+          <td>{{book_data.isbn}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Year</th>
+          <td>{{book_data.year}}</td>
+        </tr>
+    </table>
+  </div>
+  <div class="col-6">
+    <h3 id="review-title"> Users' reviews:</h3>
+      <div class='container' id= 'quote-container'  >
+      {% if reviews != None %}
+        {% for row in reviews %}
+        <!-- <div class="list-group-item"> -->
+          <p>Rating:{{row.rating}} of 5 stars</p>
+          <blockquote class="blockquote">
+            <p>"{{row.review}}"</p>
+            <footer class="blockquote-footer">{{row.user_username}}</footer>
+          </blockquote>
+          <hr>
+        <!-- </div> -->
+          {% endfor %}
+        {% endif %}
+      <!-- </div> -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <h3>What's your opinion on this book?</h3>
+    <form action="{{url_for('book_info',isbn = book_data.isbn)}}" method="post">
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="text-review" placeholder="Type your review."/>
+        <select name="stars-rating" class='m-1' required>
+          <option selected value disabled> -- Select rating -- </option>
+          <option value="1">&#10025;</option>
+          <option value="2">&#10030; &#10025;</option>
+          <option value="3"> &#10028; &#10025; &#10030;</option>
+          <option value="4">&#10025; &#10030; &#10028; &#10031;</option>
+          <option value="5">&#10027; &#10028; &#10025; &#10031; &#10030;</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="col-6">
+    <div class='container' id ='quote-container' >
+      <div class="row">
+        <div class="col-8">
+          <a href="https://www.goodreads.com/">
+            <img src="..\static\img\goodreads.png" width=70%>
+          </a>
+          <br><br>
+          <p>{{goodreads_rating}} of 5 stars</p>
+          <p>{{goodreads_count}} people have rated this book</p>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+{% endblock %}

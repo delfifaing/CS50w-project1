@@ -1,0 +1,151 @@
+html body{
+    background-image: url("/static/img/books.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+/* Layout */
+h2,h3{
+  color: white;
+  font-family: fantasy;
+}
+
+ul li a{
+   color: brown;
+   font-family: fantasy;
+ }
+.btn{
+  font-size: 20px;
+  font-family: fantasy;
+  color: black;
+  background-color:rgba(255,232,194,0.7);
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover{
+  background-color: rgba(255,232,194,1);
+}
+
+.navbar{
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255,232,194,0.7);
+  background-image: none;
+  margin: auto;
+ }
+
+.alert{
+   /* background-color: rgba(132,18,45,0.7); */
+   border: none;
+   color: white;
+ }
+
+ .alert-error{
+   background-color: rgba(132,18,45,0.7);
+ }
+
+ .alert-success{
+background-color: rgba(107,142,35,0.7);
+}
+
+ #general{
+     top: 28%;
+     padding: 2%;
+     position: absolute;
+     /* background-color: rgba(102,0,0,0.3); */
+   }
+
+/* Index */
+
+a h4{
+ color:#008080;
+}
+
+.btn-info{
+   font-size: 30px;
+   font-family: fantasy;
+   color: black;
+   background-color:rgba(255,232,194,0.7);
+   cursor: pointer;
+   border: none;
+ }
+
+ .btn-info:hover{
+   background-color: rgba(255,232,194,1);
+ }
+
+ #logo_title{
+   background-image: radial-gradient(rgba(255,232,194,0.7), rgba(255,232,194,0.6), rgba(255,232,194,0.2));
+   height: 200px;
+   top: 50px;
+ }
+
+ #desc{
+    padding: 5%;
+}
+.icon{
+     top: 5%;
+   }
+
+ /* search */
+
+.list-group{
+ overflow: scroll;
+ max-height: 400px;
+}
+
+.list-group-item{
+ background-color: rgba(255,232,194,0.8);
+ color: #008080;
+ font-family: fantasy;
+ border: brown;
+ max-height: 200px;
+}
+
+.list-group-item:hover{
+ background-color: rgba(255,232,194,1);
+}
+
+.float-left{
+  color:black;
+}
+/* book_info */
+
+table tr td,th{
+color = white;
+background-color: rgba(255,232,194,0.8);
+font-family: fantasy;
+font-size: 20;
+}
+
+p,footer{
+color:black;
+font-family: fantasy;
+font-size: 20;
+}
+
+.blockquote-footer {
+  display: block;
+  font-size: 80%; // back to default font-size
+  color: $blockquote-small-color;
+}
+
+#quote-container{
+  background-color: rgba(255,232,194,0.8);
+  overflow: scroll;
+  max-height: 200px;
+  padding-top: 2%;
+}
+
+hr{
+  border-color: brown;
+}
+/* profile */
+
+h5{
+  color: black;
+}
+h6{
+  color: brown;
+}
