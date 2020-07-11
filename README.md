@@ -16,6 +16,7 @@ $ pip install -r requirements.txt
 
 # Set environment variables
 $ export FLASK_APP=application.py 
+$ export FLASK_DEBUG=1
 $ export DATABASE_URL = <Heroku Postgres database URI>
 
 # Run
