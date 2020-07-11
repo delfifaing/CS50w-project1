@@ -5,7 +5,7 @@ PAPYRIR is a book reveiw web application, generated using a flask framework. Thi
 
 A demonstration video can be found in:  https://youtu.be/16zsY3Z4Uak
 
-### Run locally
+### Run Locally
 ``` 
 # Clone repo
 $ git clone 
